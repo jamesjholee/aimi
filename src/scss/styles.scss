@@ -1,0 +1,115 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 20px;
+
+  @media (min-width: 800px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.image-checkbox input[type="checkbox"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.image-checkbox input[type="checkbox"]:checked + .image-overlay {
+  outline: none;
+  border-color: red;
+}
+
+.image-checkbox input[type="checkbox"] + .image-overlay::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 20px;
+  height: 20px;
+  border: 2px dotted red;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-checkbox {
+  position: relative;
+  padding-top: 100%;
+  width: 100%;
+  padding-bottom: 0;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 2px solid white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.image-checkbox label {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.image-checkbox label {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-checkbox {
+  position: relative;
+  width: 100%; /* Adjust width to desired size */
+  padding-bottom: 0; /* Reset padding */
+  overflow: hidden;
+  background-size: cover; /* Ensure background covers entire container */
+  background-repeat: no-repeat; /* Prevent background image from repeating */
+  background-position: center; /* Center the background image */
+  border: 2px solid white; /* Add a white border */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a shadow */
+}
+
+
+.image-checkbox label {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+  border: 2px solid white;
+  transition: border-color 0.3s ease;
+}
+
+.image-overlay::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: 100%;
+  height: 100%;
+  border: inherit;
+  box-shadow: inherit;
+}

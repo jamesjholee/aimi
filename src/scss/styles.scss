@@ -60,39 +60,6 @@
   cursor: pointer;
 }
 
-.image-checkbox label {
-  display: block;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-}
-
-.image-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.image-checkbox {
-  position: relative;
-  width: 100%; /* Adjust width to desired size */
-  padding-bottom: 0; /* Reset padding */
-  overflow: hidden;
-  background-size: cover; /* Ensure background covers entire container */
-  background-repeat: no-repeat; /* Prevent background image from repeating */
-  background-position: center; /* Center the background image */
-  border: 2px solid white; /* Add a white border */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a shadow */
-}
-
-
-.image-checkbox label {
-  display: block;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-}
-
 .image-overlay {
   position: absolute;
   top: 0;
